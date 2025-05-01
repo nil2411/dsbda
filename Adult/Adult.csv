@@ -1,0 +1,30 @@
+age,workclass,educationnum,education,maritial-status,occupation,Relationship,race,gender,capitalgain,capitalloss,hoursperweek,nativecountry,salary
+9,state-govt,77516,Bachelors,NeverMarried,Adm-clerical,Not-in-family,white ,male,2174,0,40,US,<=50K
+56,private,44563,master,married,supervisor,sister,white ,male,3425,98,18,UK,67K
+25,government,34567,doctor,divorce,student,father,black,male,2345,45,22,INDIA,23K
+34,private,12456,researcher,single,student,brother,black,female,2123,0,34,BRAZIL,45K
+56,private,23432,Bachelors,married,postman,uncle ,black,female,2456,0,20,AUSTRIA,45K
+NA,private,23412,tenth,single,carpenter,Not-in-family,white ,male,6789,0,20,SYRIA,45K
+56,private,22222,secondary,single,engineer,brother,white ,male,3456,0,20,NAGASAKI,45K
+NA,private,12312,Bachelors,single,engineer,brother,white ,male,2345,0,20,PALI,45K
+NA,private,23232,Bachelors,single,doctor,brother,white ,male,234,0,20,UN,45K
+28,private,NA,Bachelors,single,doctor,brother,white ,male,0,0,20,INDIA,45K
+56,private,0,Bachelors,single,police,brother,white ,male,32332,0,20,BRAZIL,45K
+47,private,98768,Bachelors,single,professor,brother,white ,male,424224,0,20,AUSTRIA,45K
+23,private,78656,Bachelors,single,professor,brother,white ,female,6788976,0,20,SYRIA,45K
+12,private,3456,Bachelors,married,driver,uncle ,white ,female,7675,0,20,NAGASAKI,45K
+34,private,4567,Bachelors,married,painter,uncle ,white ,male,7575,0,20,PALI,45K
+49,private,23555,Bachelors,married,stallowner,uncle ,white ,male,4353,0,24,PALI,45K
+60,private,345333,0,divorce,business,uncle ,white ,male,q43,0,24,PALI,45K
+32,government,345,HS,single,professor,uncle ,white ,male,243,0,24,PALI,45K
+31,selfemployed,12345,graduate,divorce,driver,uncle ,white ,male,24556,0,24,PALI,20K
+22,business,3456,somecollege,single,painter,uncle ,white ,male,546,23,24,PALI,0
+23,NA,2345,graduate,single,fermfishing,uncle ,white ,male,q23434,44,24,PALI,67K
+28,private,87878,graduate,single,business,soninlaw,white ,male,98778,44,24,PALI,
+26,private,7678,graduate,single,Adm-clerical,soninlaw,black,male,6789,,24,PALI,54K
+28,private,4325,graduate,single,supervisor,son,white,male,3456,56,24,PALI,54K
+19,private,23456,graduate,single,student,niece,white,male,2345,6,48,PALI,54K
+13,notemp,1234,graduate,single,student,Not-in-family,white,female,234,6,48,UK,54K
+28,private,4562,graduate,single,postman,Not-in-family,white,female,0,6,48,UK,54K
+38,private,23456,graduate,single,carpenter,Not-in-family,white,male,-2475.2,7,48,UK,54K
+39,private,768,graduate,single,engineer,Not-in-family,white,male,-4155.2,7,48,UK,54K
