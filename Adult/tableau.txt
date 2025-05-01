@@ -1,104 +1,49 @@
-1. 1D Visualizations (Single Variable)
-A. Histogram: Age Distribution by Salary
-Steps:
+1. Histogram: Age Distribution by Salary
+✅ Correct, but note:
 
-Drag age(bin) to Columns.
-Drag CNT(adult.csv) to rows
-Drag salary to Color.
-Insight: Compare age distributions for high (>50K) vs. low (<=50K) earners.
+Use age as a binned field.
 
-2. 2D Visualizations (Two Variables)
-A. Scatter Plot: Capital Gain vs. Hours per Week
-Steps:
+CNT(adult.csv) = Tableau auto count of records.
 
-Drag capitalgain to Columns.
+Issue: The salary values aren't consistently formatted (e.g., <=50K, 67K, 23K, etc.). This field needs cleaning to group into >50K and <=50K.
 
-Drag hoursperweek to Rows.
+2. Scatter Plot: Capital Gain vs. Hours per Week
+✅ Correct setup.
 
-Drag salary to Color.
+⚠️ Make sure capitalgain is numeric — it is currently stored as a string, so convert it to numeric in Tableau or Python.
 
-Add trend line: Analytics pane → Trend Line → Linear.
+Add linear trend line via Analytics → Trend Line → Linear.
 
-Insight: High capital gain often correlates with higher working hours.
+3. Heatmap: Occupation vs. Marital Status
+⚠️ Column name in your CSV is maritial-status (note the typo).
 
-B. Heatmap: Occupation vs. Marital Status
-Steps:
+✅ Fix: Use maritial-status instead of marital-status.
 
-Drag occupation to Columns.
+4. Bubble Chart: Age, Hours/Week, Capital Gain
+✅ Correct in logic.
 
-Drag marital-status to Rows.
+⚠️ Clean and ensure capitalgain is numeric.
 
-Drag CNT(occupation) to Color.
+✅ Gender is appropriate for color coding.
 
-Adjust color gradient: Click Color → Edit Colors.
+5. Line Chart: Observation Order vs. Capital Gain
+✅ Correct.
 
-3. 3D Visualization (Workaround)
-Bubble Chart: Age, Hours/Week, Capital Gain
-Steps:
+⚠️ Ensure capitalgain is treated as numeric.
 
-Drag age to Columns.
+Use Tableau’s INDEX() as a calculated field.
 
-Drag hoursperweek to Rows.
+6. Parallel Coordinates Plot
+✅ Correct approach but requires normalization (Tableau doesn’t support this directly; you must pre-process or use calculated fields).
 
-Drag capitalgain to Size.
+7. Treemap: Workclass → Occupation → Salary
+✅ Hierarchy logic is correct.
 
-Drag gender to Color.
+⚠️ Again, salary needs to be categorized properly (clean irregular formats).
 
-Why? Size encodes a third dimension (capital gain).
+✅ Use AVG(capitalgain) and color by salary.
 
-4. Temporal Visualization (Simulated)
-Line Chart: "Observation Order vs. Capital Gain"
-Steps:
+8. Network Visualization (Workaround)
+✅ Reasonable workaround using Tableau Prep or Excel.
 
-Create calculated field Observation Order:
-
-INDEX()
-Drag Observation Order to Columns.
-
-Drag capitalgain to Rows.
-
-Drag workclass to Color.
-
-Insight: Simulates trends in capital gain across records.
-
-5. Multidimensional Visualization
-Parallel Coordinates Plot
-Steps:
-
-Normalize 4+ measures (e.g., age, educationnum, capitalgain, hoursperweek) to 0–1 scale.
-
-Drag Measure Names to Columns.
-
-Drag Normalized Values to Rows.
-
-Drag salary to Color.
-
-Insight: Compares multiple variables across salary groups.
-
-6. Tree/Hierarchical Visualization
-Treemap: Workclass → Occupation → Salary
-Steps:
-
-Create hierarchy: Right-click workclass → Hierarchy → Add occupation.
-
-Drag hierarchy to Columns/Rows.
-
-Drag AVG(capitalgain) to Size, salary to Color.
-
-Click "Show Me" → Treemap.
-
-Why? Shows earnings distribution across workclass-occupation groups.
-
-7. Network Visualization (Workaround)
-Node-Link: "Occupation Relationships"
-Steps:
-
-Create a source-target table in Tableau Prep (link occupations sharing common education levels).
-
-Use "Relationship" field as edges.
-
-Drag occupation to Detail, CNT(occupation) to Size.
-
-Use "Filled Map" mark type with curved paths.
-
-Insight: Artificial network showing occupation-education ties.
+⚠️ You’d need to manually create a source-target table (not available in raw CSV).
