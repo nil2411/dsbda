@@ -8,12 +8,8 @@ hbase shell
 create 'student','info'
 
 put 'student','1','info:name','shrushti'
-
 put 'student','1','info:age','41'
-
-
 put 'student','2','info:name','Arohi'
-
 put 'student','2','info:age','40'
 
 scan 'student'
@@ -35,4 +31,3 @@ scan 'student'
         
     select * from stud;
 
-    insert into stud values('3','Arohi','70');
